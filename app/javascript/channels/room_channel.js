@@ -16,8 +16,8 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   speak: function(message) {
     return this.perform('speak', {message: message});
   }
-  
 });
+
 window.addEventListener("keypress", function(e) {
   if (e.keyCode === 13) {
     appRoom.speak(e.target.value);
